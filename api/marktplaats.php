@@ -18,7 +18,7 @@ if (empty($_GET['since'])) {
 }
 
 // &sortBy=SortIndex&sortOrder=decreasing&utm_source=systemmail&utm_medium=email&utm_campaign=searchAlerts&utm_content=results_link_hit
-$url = "http://www.marktplaats.nl/z.html?query=$search&startDateFrom=$startDateFrom&view=lr";
+$url = "http://www.marktplaats.nl/z.html?query=$search&startDateFrom=$startDateFrom&view=lr&searchOnTitleAndDescription=true";
 $contents = file_get_contents($url);
 $doc = phpQuery::newDocumentHTML($contents);
 $items = [];
@@ -41,7 +41,8 @@ foreach($doc['article.search-result'] as $brick) { // div a img
 $result["url"] = $url;
 $result["search"] = $search;
 $result["shownResults"] = count($doc['article.search-result']);
-$result["totalResults"] = intval($doc['ul.breadcrumbs li h1 span']->html());
+$result["totalResults"] = intval(str_replace(".","",$doc['ul.breadcrumbs li h1 span']->html()));
+
 if (!empty($since)) {
   $result["since"] = $since;
   $result["sinceDate"] = date("Y-m-d",strtotime($since));

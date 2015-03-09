@@ -1,0 +1,22 @@
+
+<div class="row">
+  <div class="column">
+
+    <div class="panel">
+      <h1>Terms</h1>
+      <ul>
+        <li ng-repeat="term in terms"> <!--  track by $index"> -->
+          <a href="#results/{{term}}">{{term}}</a>
+          <a ng-click="confirmRemove(term)" class="right">X</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h1>Add term</h1>
+      <input type="text" ng-model="term">
+      <button ng-click="add(term)">Add</button>
+    </div>
+
+  </div>
+</div>

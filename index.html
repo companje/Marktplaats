@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>Marktplaats</title>
+  <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"> -->
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+
+  <link rel="stylesheet" href="css/app.css">
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/controllers/Home.js"></script>
+  <script src="app/controllers/Results.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+
+
+  <script>
+    $(document).foundation();
+  </script>
+</head>
+
+<body>
+
+  <div class="contain-to-grid">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#/">Marktplaats</a></h1>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div ng-view ng-class="slide"></div>
+
+
+        
+</body>
+</html>

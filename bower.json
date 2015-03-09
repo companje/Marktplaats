@@ -1,0 +1,25 @@
+{
+  "name": "Marktplaats",
+  "version": "0.0.1",
+  "homepage": "https://github.com/companje/Marktplaats-Search",
+  "authors": [
+    "Rick Companje <rick@companje.nl>"
+  ],
+  "description": "Search on Marktplaats",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.1",
+    "bootstrap": "~3.3.2",
+    "angular": "~1.3.14",
+    "angular-route": "~1.3.14",
+    "slick": "*"
+  }
+}
