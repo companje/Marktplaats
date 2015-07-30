@@ -1,7 +1,7 @@
 app.controller('Home', function($scope, $http) {
   console.log('Home');
   
-  var terms = $scope.terms = JSON.parse(localStorage.getItem("terms"));
+  var terms = $scope.terms = JSON.parse(localStorage.getItem("terms")) || [];
 
   console.log('Home',terms);
 
