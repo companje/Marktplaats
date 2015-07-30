@@ -2,8 +2,14 @@
   <div class="columns thumbs">
 
   <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
-    <li ng-repeat="item in items">
-      <img ng-src="{{item.image}}">
+    <li ng-repeat="category in items">
+      {{category}}
+      <ul>
+        <li ng-repeat="item in category.items">
+          <a href="{{item.href}}" target="_blank"><img ng-src="{{item.image}}" /></a>
+          <p> {{item.price}} </p>
+        </li>
+      </ul>
     </li>
   </ul>
 
